@@ -1,0 +1,1 @@
+# Api gateway example with spring-integration messaging

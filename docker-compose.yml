@@ -1,0 +1,17 @@
+version: '3'
+services:
+  rabbit:
+    hostname: rabbit
+    image: bitnami/rabbitmq:latest
+    environment:
+      - RABBITMQ_USERNAME=admin
+      - RABBITMQ_PASSWORD=admin
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    expose:
+      - "5672"
+    deploy:
+      resources:
+        limits:
+          memory: 512M
